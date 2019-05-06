@@ -6,11 +6,13 @@
 package com.app.sistconWeb.models;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 
 /**
@@ -23,16 +25,31 @@ public class Bloco implements Serializable {
     @SequenceGenerator(name = "bloco_seq", sequenceName = "bloco_seq",
             allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "bloco_seq")
-    private Long idBloco;
+    private Long id;
     private String sigla;
     private String descricao;
-
-    public Long getIdBloco() {
-        return idBloco;
+    
+    @ManyToOne
+    private Condominio condominio;
+     
+    @OneToMany
+    private List<Unidade> unidade;
+    
+    public List<Unidade> getUnidade() {
+        return unidade;
     }
 
-    public void setIdBloco(Long idBloco) {
-        this.idBloco = idBloco;
+    public void setUnidade(List<Unidade> unidade) {
+        this.unidade = unidade;
+    }
+    
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getSigla() {
@@ -58,8 +75,5 @@ public class Bloco implements Serializable {
     public void setCondominio(Condominio condominio) {
         this.condominio = condominio;
     }
-    
-    @ManyToOne
-    private Condominio condominio;
     
 }

@@ -14,35 +14,35 @@
         <section layout:fragment="header">
             <h1>
                 PAINEL
-                <small>Cadastro de Condominios</small>
+                <small>Cadastro de Blocos</small>
             </h1>
             <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="/index"><i class="fa fa-dashboard"></i> Home</a></li>
                 <li class="active">Dashboard</li>
             </ol>
         </section>
         <div class="panel panel-default">
             <div class="panel-heading">
-                <strong>Cadastro de Condominios</strong>
+                <strong>Cadastro de Blocos</strong>
             </div>
             <div layout:fragment="content">
                 <h1>
-                <small>Condominios</small>
+                <small>Blocos</small>
                 </h1>
                  <div class="panel-body">
-                    <form class="form-horizontal" th:object="${condominio}" th:action="@{/condominios/salvar}" method="POST" style="margin: 10px">
+                    <form class="form-horizontal" th:object="${bloco}" th:action="@{/blocos/salvar}" method="POST" style="margin: 10px">
                         <div class="form-group">
                             <fieldset>              
                                 <input type="hidden" th:field="*{id}"/>
-                                <label>Nome</label>
-                                <input type="text" class="form-control input-sm" th:field="*{nome}" autofocus="autofocus" placeholder="Informe o nome do condominio" maxlength="50"/>                                                         
-                                <label>Endereço</label> 
-                                <input type="text" class="form-control input-sm" th:field="*{endereco}" autofocus="autofocus" placeholder="Informe o endereco"/>                      																	
+                                <label>Sigla</label>
+                                <input type="text" class="form-control input-sm" th:field="*{sigla}" autofocus="autofocus" placeholder="Informe bloco" maxlength="50"/>                                                         
+                                <label>Descrição</label> 
+                                <input type="text" class="form-control input-sm" th:field="*{descricao}" autofocus="autofocus" placeholder="Informe a descricao"/>                      																	
                             </fieldset>
                         </div>
                         <div class="form-group row">
                             <button type="submit" class="btn btn-sm btn-primary"style="color: #FFFFFF; background-color: #07a542">Salvar</button>
-                            <a th:href="@{/condominios}" class="btn btn-sm btn-default"style="color: #FFFFFF; background-color: #3c8dbc">Cancelar</a>
+                            <a th:href="@{/blocos}" class="btn btn-sm btn-default"style="color: #FFFFFF; background-color: #3c8dbc">Cancelar</a>
                         </div>
                     </form>
 
