@@ -31,7 +31,7 @@ public class Espaco implements Serializable {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "espaco_seq")
     private int id;
     private String nome;
-    private String detalhesEspaco;
+    //private String detalhesEspaco;
     @ManyToOne
     private Condominio condominio;
     @OneToMany(mappedBy = "espaco")
@@ -56,14 +56,6 @@ public class Espaco implements Serializable {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getDetalhesEspaco() {
-        return detalhesEspaco;
-    }
-
-    public void setDetalhesEspaco(String detalhesEspaco) {
-        this.detalhesEspaco = detalhesEspaco;
     }
 
     public Condominio getCondominio() {

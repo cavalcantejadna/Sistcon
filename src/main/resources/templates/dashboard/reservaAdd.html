@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorate="layout">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Dashboard</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"></link>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <section layout:fragment="header">
+            <h1>
+                PAINEL
+                <small>Cadastro de Reservas</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">Dashboard</li>
+            </ol>
+        </section>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <strong>Cadastro de Reservas</strong>
+            </div>
+            <div layout:fragment="content">
+                <h1>
+                <small>Reservas</small>
+                </h1>
+                 <div class="panel-body">
+                    <form class="form-horizontal" th:object="${reservas}" th:action="@{/reservas/salvar}" method="POST" style="margin: 10px">
+                        <div class="form-group">
+                            <fieldset>              
+                                <input type="hidden" th:field="*{id}"/>
+                                <label>Espaco</label>
+                                <input type="text" class="form-control input-sm" th:field="*{nome}" autofocus="autofocus" placeholder="Informe o nome da reserva" maxlength="50"/>                                                         
+                                <label>Tipo</label> 
+                                <input type="text" class="form-control input-sm" th:field="*{tipo}" autofocus="autofocus" placeholder="Informe o tipo"/>                      																	
+                            </fieldset>
+                        </div>
+                        <div class="form-group row">
+                            <button type="submit" class="btn btn-sm btn-primary"style="color: #FFFFFF; background-color: #07a542">Salvar</button>
+                            <a th:href="@{/}" class="btn btn-sm btn-default"style="color: #FFFFFF; background-color: #3c8dbc">Cancelar</a>
+                            <button type="submit" class="btn btn-sm btn-primary"style="color: #FFFFFF; background-color: #CC0000">Excluir</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+    </body>
+</html>
