@@ -1,0 +1,17 @@
+.panel-default {
+	margin: 0 10px 0 10px;
+}
+
+.alert {
+	margin: 10px 10px 10px 10px;
+}
+
+.link-panel {
+	float: right;
+	padding: 0px;
+}
+
+.titulo-panel {
+	float: left;
+	padding-top: 2px;
+}

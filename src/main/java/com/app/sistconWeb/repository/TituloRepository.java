@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 
 /**
  *
- * @author User
+ * @author Marcelo Fernandes
  */
 @Repository //Define a classe como um bean do Spring
 public interface TituloRepository extends JpaRepository<Titulo, Long>{

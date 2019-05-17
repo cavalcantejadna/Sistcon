@@ -24,16 +24,18 @@ public class ReservaService {
     public List<Reserva> listarReserva() {
 		return rs.findAll();
 	}
-	//Retorno um condominio a partir do ID
+   
+	//Retorno uma reserva a partir do ID
 	public Reserva findOne(Long id) {
 		return rs.findOne(id);
 	}
-	//Salva ou atualiza um condominio
+	//Salva ou atualiza uma reserva feita
 	public Reserva salvarReserva(Reserva reserva) {
 		return rs.saveAndFlush(reserva);
 	}
          
-        //Exclui um condominio
+        //Exclui uma reserva
 	public void removerReserva(Long id) {
 		rs.delete(id);
-	}}
+	}
+}

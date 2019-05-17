@@ -15,7 +15,7 @@ public class CustomWebSecurityConfigurer extends WebSecurityConfigurerAdapter {
        http
            .csrf().disable()
            .authorizeRequests()
-           .antMatchers("/login")
+           .antMatchers("/login/titulos")
            .permitAll();
     }
 

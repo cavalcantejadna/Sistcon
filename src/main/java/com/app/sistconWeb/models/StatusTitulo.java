@@ -2,7 +2,7 @@ package com.app.sistconWeb.models;
 
 /**
  *
- * @author User
+ * @author Marcelo Fernandes
  */
 public enum StatusTitulo {
 	 PENDENTE("Pendente"),
