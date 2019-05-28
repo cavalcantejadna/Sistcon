@@ -3,7 +3,7 @@
  * ----------
  */
 .skin-blue .main-header .navbar {
-  background-color: #0097bc;
+  background-color: #004588;
 }
 .skin-blue .main-header .navbar .nav > li > a {
   color: #ffffff;
@@ -39,11 +39,11 @@
     color: #fff;
   }
   .skin-blue .main-header .navbar .dropdown-menu li a:hover {
-    background: #367fa9;
+    background: #004588;
   }
 }
 .skin-blue .main-header .logo {
-  background-color: #0097bc;
+  background-color: #004588;
   color: #ffffff;
   border-bottom: 0 solid transparent;
 }
@@ -51,49 +51,59 @@
   background-color: #0097bc;
 }
 .skin-blue .main-header li.user-header {
-  background-color: #0097bc;
+  background-color: #004588;
 }
+
 .skin-blue .content-header {
   background: transparent;
 }
 .skin-blue .wrapper,
 .skin-blue .main-sidebar,
 .skin-blue .left-side {
-  background-color: #fff;
+  background-color: #004588; /*menu lateral*/
 }
+.skin-blue .sidebar-menu li:hover > a { /*hover desliza pelo menu*/
+  background-color: #0097bc;
+}
+
 .skin-blue .user-panel > .info,
 .skin-blue .user-panel > .info > a {
-  color: #999;
+  color: #fff;
 }
 .skin-blue .sidebar-menu > li.header {
   color: #4b646f;
   background: #1a2226;
 }
+
 .skin-blue .sidebar-menu > li > a {
   border-left: 3px solid transparent;
 }
 .skin-blue .sidebar-menu > li:hover > a,
 .skin-blue .sidebar-menu > li.active > a {
-  color: #999999;
-  background: #fff;
+  color: #fff;
+  background: #004588; /*função que esconde o menu abaixo*/
   border-left-color: #fff;
 }
+.skin-blue .sidebar-menu > li:hover > a{ /*função que navega no menu*/
+    background-color: #0097bc;
+}
+
 .skin-blue .sidebar-menu > li > .treeview-menu {
   margin: 0 1px;
-  background: #fff;
+  background: #004588; /*cor do menu lateral esquerdo*/
 }
 .skin-blue .sidebar a {
-  color: #999999;
+  color: #fff;
 }
 .skin-blue .sidebar a:hover {
   text-decoration: none;
 }
 .skin-blue .treeview-menu > li > a {
-  color: #999999;
+  color: #fff;
 }
 .skin-blue .treeview-menu > li.active > a,
 .skin-blue .treeview-menu > li > a:hover {
-  color: #999999;
+  color: #fff;
 }
 .skin-blue .sidebar-form {
   border-radius: 3px;
@@ -181,7 +191,7 @@
     color: #fff;
   }
   .skin-blue-light .main-header .navbar .dropdown-menu li a:hover {
-    background: #367fa9;
+    background: #004588; /**/
   }
 }
 .skin-blue-light .main-header .logo {
@@ -227,7 +237,7 @@
 .skin-blue-light .sidebar-menu > li:hover > a,
 .skin-blue-light .sidebar-menu > li.active > a {
   color: #000000;
-  background: #f4f4f5;
+  background: #004588;
 }
 .skin-blue-light .sidebar-menu > li.active {
   border-left-color: #3c8dbc;

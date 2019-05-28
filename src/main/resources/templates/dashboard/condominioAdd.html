@@ -39,10 +39,22 @@
                                 <label>Endereço</label> 
                                 <input type="text" class="form-control input-sm" th:field="*{endereco}" autofocus="autofocus" placeholder="Informe o endereco"/>                      																	
                             </fieldset>
+                            <label for="selecao">Unidades</label>
+                            <!--<input class="form-control "type="text" id="selecao" placeholder="Informe a unidade"/>-->
+         
+                            <select class="form-control" id="selecao">
+                                <option>Selecione</option>
+                                <option>Lote</option>
+                                <option>Apartamento</option>
+                                <option>Casa</option>
+                            </select>
+                        
                         </div>
+                        
+                        
                         <div class="form-group row">
-                            <button type="submit" class="btn btn-sm btn-primary"style="color: #FFFFFF; background-color: #07a542">Salvar</button>
-                            <a th:href="@{/condominios}" class="btn btn-sm btn-default"style="color: #FFFFFF; background-color: #3c8dbc">Cancelar</a>
+                            <button type="submit" class="btn btn-sm btn-success">Salvar</button>
+                            <a th:href="@{/condominios}" class="btn btn-sm btn-info">Cancelar</a>
                         </div>
                     </form>
 
@@ -50,3 +62,4 @@
             </div>
     </body>
 </html>
+<!-- class="form-control é o que deixa o campo de digitação ocupando toda tela, só for, diminui-->

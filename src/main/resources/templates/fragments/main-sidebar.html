@@ -4,7 +4,11 @@
     <div class="user-panel">
         <div class=" text-center">
             
-            <p>Menu de Navegação</p>
+            <p>Sistema de Gerenciamento</p>
+            <p>de Condomínio</p>
+            <style>
+            * p { color: white; }
+            </style>
             <!--<a href="#"><i class="fa fa-circle text-success"></i> Online</a>-->
         </div>
     </div>
@@ -23,23 +27,24 @@
     <!-- menu da barra lateral:: o estilo pode ser encontrado em sidebar.less -->
     <ul class="sidebar-menu">
         
-        <li><a href="/index"><i class="fa fa-home"style="font-size: 20px;color: gray"></i> Início </a></li>
+        <li><a href="/index"><i class="fa fa-home"style="font-size: 20px;color: white"></i> Início </a></li>
                 
         
         <!--<li class="fa fa-home"style="font-size: 20px;color:gray;">Início</li>-->
         <li class="active treeview">
             <a href="#">
-                <i class="fa fa-folder"></i> <span>Meus Dados</span> <!--alteração do icon na classe fa fa --->
+                <i class="fa fa-navicon"></i> <span>Menu</span> <!--alteração do icon na classe fa fa --->
                 <span class="pull-right-container">
                     <i class="fa fa-angle-left pull-right"></i>
                 </span>
             </a>
+                
             <ul class="treeview-menu">
-                <li class="active"><a th:href="@{~/dashboard/index.html}"><i class="fa fa-arrow-circle-down"></i> Página 1</a></li>
-                <li><a th:href="@{~/dashboard/index2.html}"><i class="fa fa-arrow-circle-down"></i> Página 2</a></li>
+                <li class="active"><a th:href="@{~/dashboard/index.html}"><i class="fa fa-share"></i> Página 1</a></li>
+                <li><a th:href="@{~/dashboard/index2.html}"><i class="fa fa-share"></i> Página 2</a></li>
             
+       
         </li>
-        
         <!-- 
         <li class="treeview">
             <a href="#">
@@ -160,6 +165,25 @@
             </ul>
         </li> 
         -->
+ 
+        
+   <!--alteração para um sub-menu de cadastro-->
+
+<li class="treeview">
+    <a href="#">
+        <i class="fa fa-folder"></i> <span>Cadastros</span>
+        <ul>
+          <li><i class="fa fa-institution"></i>Condomínio</li>
+          <li><i class="fa fa-pencil-square"></i>Unidade</li>
+          <li><i class="fa fa-male"></i>Proprietário</li>
+          <li><i class="fa fa-user"></i>Usuário</li>
+          <li><i class="fa fa-users"></i>Morador</li>
+          <li><i class="fa fa-calendar-check-o"></i>Reserva</li>
+          <li><i class="fa fa-automobile"></i>Veículo</li>
+        </ul>
+        
+</li>
+
         
         <li class="treeview">
             <a href="#">
@@ -177,14 +201,14 @@
 <!--comeco-->
 <li class="treeview">
     <a href="#">
-        <i class="fa fa-edit"></i> <span>Contas</span>
+        <i class="fa fa-edit"></i> <span>Títulos</span>
         
 </li>
 
 <!--comeco-->
 <li class="treeview">
     <a href="#">
-        <i class="fa fa-file"></i> <span>Documentos</span>
+        <i class="fa fa-area-chart"></i> <span>Consumo</span>
         
 </li>
 
@@ -194,6 +218,7 @@
         <i class="fa fa-calendar"></i> <span>Reservas de Áreas</span>
         
 </li>
+
 
 <!--comeco-->
 <li class="treeview">
@@ -209,12 +234,14 @@
         
 </li>
 
-<!--comeco-->
+<!--comeco
 <li class="treeview">
     <a href="#">
-        <i class="fa fa-area-chart"></i> <span>Consumo</span>
+        <i class="fa fa-area-chart"></i> <span>Documentos</span>
         
 </li>
+-->
+
 
 <!--Exemplos simples-->
 <!--<li><a href="documentation/index.html"><i class="fa fa-book"></i> <span>Documentos</span></a></li>

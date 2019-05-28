@@ -44,7 +44,7 @@
                                     <td th:text="${usuario.senha}"></td>
                                     <td>
                                         <div class="btn-group pull-right">
-                                            <a class="btn btn-sm btn-primary" th:href="@{/usuarios/editar/{id}(id=${usuario.id})}" >Editar</a>
+                                            <a class="btn btn-sm btn-info" th:href="@{/usuarios/editar/{id}(id=${usuario.id})}" >Editar</a>
                                             <a class="delete btn btn-sm btn-danger" th:href="@{/usuarios/deletar/{id}(id=${usuario.id})}">Excluir</a>
                                         </div>
                                     </td>
