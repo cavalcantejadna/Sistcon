@@ -3238,7 +3238,7 @@ table.text-center th {
 .login-box-msg,
 .register-box-msg {
   margin: 0;
-  text-align: center;
+  text-align: left;
   padding: 0 20px 20px 20px;
 }
 .social-auth-links {
